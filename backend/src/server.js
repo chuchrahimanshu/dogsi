@@ -1,7 +1,5 @@
 // Import Section
 import { app } from "./app.js";
-import "dotenv";
-import "./config/database.config.js";
 
 // Configuration Section
 const PORT = process.env.BACKEND_PORT;
