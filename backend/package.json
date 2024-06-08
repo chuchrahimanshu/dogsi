@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Dogsi is a comprehensive online marketplace for buying and selling dog products 🐕🛒. Built with Node.js, Express.js, MongoDB, Sequelize, React.js, Tailwind CSS, and Redux, 🐶 Dogsi offers a secure, user-friendly platform for all dog enthusiasts 🛍️. Additionally, we are also creating a vibrant community of dog owners 🐾❤️.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon -r dotenv/config --experimental-json-modules src/server.js"
+  },
+  "keywords": [
+    "marketplace",
+    "dogs",
+    "e-commerce",
+    "shopping",
+    "products"
+  ],
+  "author": "Himanshu Chuchra",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
+}
