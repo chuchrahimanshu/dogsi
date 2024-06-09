@@ -1,5 +1,6 @@
 // Import Section
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
 // Schema Section
 const contactSchema = new mongoose.Schema({
@@ -125,6 +126,15 @@ const userSchema = new mongoose.Schema({
     }
 }, {
     timestamps: true
+});
+
+// Model Actions
+userSchema.pre("save", async function(next){
+    if(this.isModified("password")){
+        const salt = await bcrypt.genSaltSync(Number(process.env.BCRYPT_SALT_ROUNDS));
+        this.password = await bcrypt.hash(this.password, salt);
+    }
+    next();
 });
 
 // Exporting Model
